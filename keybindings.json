@@ -17,6 +17,11 @@
     "command": "workbench.action.navigateDown"
   },
   {
+    "command": "workbench.action.togglePanel",
+    "key": "space t t",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  },
+  {
     "key": "space ,",
     "command": "workbench.action.showAllEditors",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
