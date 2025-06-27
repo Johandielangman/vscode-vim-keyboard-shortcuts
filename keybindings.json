@@ -17,11 +17,6 @@
     "command": "workbench.action.navigateDown"
   },
   {
-    "key": "space a a",
-    "command": "editor.action.selectAll",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
-  },
-  {
     "command": "workbench.action.togglePanel",
     "key": "space t c",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
@@ -55,6 +50,16 @@
     "key": "space t x",
     "command": "workbench.action.terminal.kill",
     "when": "vim.mode == 'Normal'"
+  },
+  {
+    "key": "space /",
+    "command": "actions.find",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "space w",
+    "command": "workbench.action.files.save",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "key": "space j c",
