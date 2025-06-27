@@ -17,9 +17,54 @@
     "command": "workbench.action.navigateDown"
   },
   {
+    "key": "space a a",
+    "command": "editor.action.selectAll",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
     "command": "workbench.action.togglePanel",
-    "key": "space t t",
+    "key": "space t c",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "key": "space t t",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "key": "space t d",
+    "command": "workbench.debug.action.toggleRepl",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "key": "space t n",
+    "command": "workbench.action.terminal.new",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "key": "space t tab",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "vim.mode == 'Normal'"
+  },
+    {
+    "key": "space t shift+tab",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "vim.mode == 'Normal'"
+  },
+  {
+    "key": "space t x",
+    "command": "workbench.action.terminal.kill",
+    "when": "vim.mode == 'Normal'"
+  },
+  {
+    "key": "space j c",
+    "command": "editor.foldAll",
+    "when": "vim.mode == 'Normal'"
+  },
+  {
+    "key": "space j e",
+    "command": "editor.unfoldAll",
+    "when": "vim.mode == 'Normal'"
   },
   {
     "key": "space ,",
