@@ -1,0 +1,16 @@
+{
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+        "before": ["d"],
+        "after": ["\"", "_", "d"]
+    },
+    {
+        "before": ["d", "d"],
+        "after": ["\"", "_", "d", "d"]
+    },
+    {
+        "before": ["<C-a>"],
+        "after": ["g", "g", "V", "G"]
+    },
+]
+}
