@@ -39,17 +39,17 @@
   {
     "key": "space t tab",
     "command": "workbench.action.terminal.focusNext",
-    "when": "vim.mode == 'Normal'"
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
     {
     "key": "space t shift+tab",
     "command": "workbench.action.terminal.focusPrevious",
-    "when": "vim.mode == 'Normal'"
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "key": "space t x",
     "command": "workbench.action.terminal.kill",
-    "when": "vim.mode == 'Normal'"
+    "when": "vim.mode == 'Normal'  && editorTextFocus"
   },
   {
     "key": "space /",
@@ -64,12 +64,12 @@
   {
     "key": "space j c",
     "command": "editor.foldAll",
-    "when": "vim.mode == 'Normal'"
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "key": "space j e",
     "command": "editor.unfoldAll",
-    "when": "vim.mode == 'Normal'"
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "key": "space ,",
