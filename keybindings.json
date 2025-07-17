@@ -5,6 +5,11 @@
     "command": "workbench.action.navigateLeft"
   },
   {
+    "key": "space .",
+    "command": "editor.action.showHover",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
     "key": "ctrl-l",
     "command": "workbench.action.navigateRight"
   },
