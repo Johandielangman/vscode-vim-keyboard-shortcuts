@@ -37,6 +37,11 @@
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   {
+    "key": "space d",
+    "command": "editor.action.trimTrailingWhitespace",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
     "key": "space t n",
     "command": "workbench.action.terminal.new",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
