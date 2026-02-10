@@ -11,12 +11,38 @@
     "editor.rulers": [
         120
     ],
+    "editor.detectIndentation": false,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.minimap.enabled": true,
+    "editor.minimap.maxColumn": 120,
+    "editor.suggestSelection": "first",
+    "editor.inlineSuggest.enabled": true,
+    "editor.wordWrap": "off",
+    "editor.linkedEditing": true,
+    "editor.codeLens": true,
+    "editor.cursorBlinking": "smooth",
+    "editor.matchBrackets": "always",
+    // "editor.semanticHighlighting.enabled": true,
     // ==================== File Settings ====================
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
     "files.eol": "\n",
+    "files.autoSave": "onFocusChange",
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        "**/.pytest_cache": true,
+        "**/.ruff_cache": true,
+        "**/.mypy_cache": true,
+        "**/node_modules": true,
+        "**/.git": true,
+        "**/.venv": true,
+        "**/uv.lock": true
+    },
     // ==================== Git Settings ====================
     "git.autofetch": true,
+    "git.confirmSync": false,
     // ==================== Vim Extension Settings ====================
     "vim.useSystemClipboard": true,
     // ==================== Ruff Settings ====================
@@ -52,9 +78,17 @@
     ],
     // ==================== Python Analysis Settings ====================
     "python.analysis.typeCheckingMode": "standard",
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.inlayHints.functionReturnTypes": false,
+    "python.analysis.inlayHints.variableTypes": false,
+    "python.analysis.autoFormatStrings": true,
+    "python.analysis.enableColorPicker": true,
+    "python.analysis.enablePytestSupport": true,
+    "python.analysis.gotoDefinitionInStringLiteral": true,
     // ==================== Python Testing Settings ====================
     "python.testing.pytestEnabled": true,
     "python.testing.unittestEnabled": false,
+    "python.testing.autoTestDiscoverOnSaveEnabled": true,
     // ==================== Codespell Settings ====================
     "cSpell.enabled": true,
     "cSpell.language": "en-GB",
@@ -83,9 +117,19 @@
         "editor.inlineSuggest.enabled": false,
         "editor.defaultFormatter": "charliermarsh.ruff",
         "editor.formatOnSave": true,
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
         "editor.codeActionsOnSave": {
             "source.organizeImports.ruff": "explicit",
             "source.fixAll.ruff": "explicit"
         }
-    }
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features",
+        "editor.formatOnSave": true
+    },
+    "[toml]": {
+        "editor.defaultFormatter": "tamasfe.even-better-toml",
+        "editor.formatOnSave": true
+    },
 }
