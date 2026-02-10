@@ -1,0 +1,91 @@
+{
+    // ==================== GitHub Copilot Settings ====================
+    "github.copilot.nextEditSuggestions.enabled": true,
+    // ==================== Workbench Appearance ====================
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.iconTheme": "catppuccin-mocha",
+    // ==================== Global Editor Configuration ====================
+    "editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
+    "editor.fontSize": 15,
+    "editor.formatOnSave": true,
+    "editor.rulers": [
+        120
+    ],
+    // ==================== File Settings ====================
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "files.eol": "\n",
+    // ==================== Git Settings ====================
+    "git.autofetch": true,
+    // ==================== Vim Extension Settings ====================
+    "vim.useSystemClipboard": true,
+    // ==================== Ruff Settings ====================
+    "ruff.lineLength": 120,
+    "ruff.configuration": "${workspaceFolder}/.ruff.toml",
+    "ruff.lint.select": [
+        "E", // pycodestyle errors
+        "F", // pyflakes
+        "B", // flake8-bugbear
+        "I", // isort
+        "FAST", // FastAPI
+        "A", // flake8-builtins
+        "C4", // flake8-comprehensions
+        "DTZ", // flake8-datetimez
+        "ISC", // flake8-implicit-str-concat
+        "ICN", // flake8-import-conventions
+        "LOG", // flake8-logging
+        "PT", // flake8-pytest-style
+        "Q", // flake8-quotes
+        "RET", // flake8-return
+        "SIM", // flake8-simplify
+        "TID", // flake8-tidy-imports
+        "TC", // flake8-type-checking
+        "ARG", // flake8-unused-arguments
+        "PTH", // flake8-use-pathlib
+        "C90", // mccabe
+        "N", // pep8-naming
+        "PERF", // Perflint
+        "RUF" // Ruff-specific rules
+    ],
+    "ruff.lint.ignore": [
+        "S101"
+    ],
+    // ==================== Python Analysis Settings ====================
+    "python.analysis.typeCheckingMode": "standard",
+    // ==================== Python Testing Settings ====================
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestEnabled": false,
+    // ==================== Codespell Settings ====================
+    "cSpell.enabled": true,
+    "cSpell.language": "en-GB",
+    "cSpell.customDictionaries": {
+        "project-words": {
+            "name": "project-words",
+            "path": "${workspaceFolder}/.project-words.txt",
+            "addWords": true,
+            "scope": "workspace"
+        }
+    },
+    // ==================== Error Lens Settings ====================
+    "errorLens.enabled": true,
+    "errorLens.enabledDiagnosticLevels": [
+        "error",
+        "warning",
+        "info",
+        "hint"
+    ],
+    "errorLens.onSave": true,
+    "errorLens.onSaveTimeout": 1000,
+    "errorLens.delay": 500,
+    "errorLens.followCursor": "allLines",
+    // ==================== Python-specific Settings ====================
+    "[python]": {
+        "editor.inlineSuggest.enabled": false,
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports.ruff": "explicit",
+            "source.fixAll.ruff": "explicit"
+        }
+    }
+}
