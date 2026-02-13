@@ -1,9 +1,26 @@
 {
     // ==================== GitHub Copilot Settings ====================
     "github.copilot.nextEditSuggestions.enabled": true,
-    // ==================== Workbench Appearance ====================
-    "workbench.colorTheme": "Catppuccin Mocha",
     "workbench.iconTheme": "catppuccin-mocha",
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
+    "workbench.preferredLightColorTheme": "Catppuccin Latte",
+    "window.autoDetectColorScheme": false,
+    "workbench.colorCustomizations": {
+        // Error Lens softer, more transparent colors
+        "errorLens.errorBackground": "#e4545410",
+        "errorLens.errorMessageBackground": "#e4545415",
+        "errorLens.errorForeground": "#ff646480",
+        "errorLens.warningBackground": "#ff942f10",
+        "errorLens.warningMessageBackground": "#ff942f15",
+        "errorLens.warningForeground": "#fa973a80",
+        "errorLens.infoBackground": "#00b7e410",
+        "errorLens.infoMessageBackground": "#00b7e415",
+        "errorLens.infoForeground": "#00b7e480",
+        "errorLens.hintBackground": "#17a2a210",
+        "errorLens.hintMessageBackground": "#17a2a215",
+        "errorLens.hintForeground": "#2faf6480"
+    },
     // ==================== Global Editor Configuration ====================
     "editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
     "editor.fontSize": 15,
@@ -68,7 +85,7 @@
         "TC", // flake8-type-checking
         "ARG", // flake8-unused-arguments
         "PTH", // flake8-use-pathlib
-        "C90", // mccabe
+        // "C90", // mccabe
         "N", // pep8-naming
         "PERF", // Perflint
         "RUF" // Ruff-specific rules
@@ -77,7 +94,7 @@
         "S101"
     ],
     // ==================== Python Analysis Settings ====================
-    "python.analysis.typeCheckingMode": "standard",
+    "python.analysis.typeCheckingMode": "off",
     "python.analysis.autoImportCompletions": true,
     "python.analysis.inlayHints.functionReturnTypes": false,
     "python.analysis.inlayHints.variableTypes": false,
@@ -89,6 +106,16 @@
     "python.testing.pytestEnabled": true,
     "python.testing.unittestEnabled": false,
     "python.testing.autoTestDiscoverOnSaveEnabled": true,
+    // ==================== Mypy Settings ====================
+    "mypy-type-checker.args": [
+        "--ignore-missing-imports", // Don't complain about third-party libraries without type stubs
+        "--follow-imports=silent", // Don't check imported modules
+        "--show-column-numbers", // Better error location info
+    ],
+    "mypy-type-checker.severity": {
+        "error": "Error",
+        "note": "Information"
+    },
     // ==================== Codespell Settings ====================
     "cSpell.enabled": true,
     "cSpell.language": "en-GB",
@@ -100,6 +127,16 @@
             "scope": "workspace"
         }
     },
+    // ==================== Terminal ====================
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "terminal.integrated.scrollback": 5000, // Increase lines shown in terminal
+    "terminal.integrated.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
+    "terminal.integrated.suggest.enabled": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.rightClickBehavior": "paste",
+    "terminal.integrated.confirmOnExit": "hasChildProcesses",
+    "terminal.integrated.altClickMovesCursor": true,
     // ==================== Error Lens Settings ====================
     "errorLens.enabled": true,
     "errorLens.enabledDiagnosticLevels": [
@@ -112,6 +149,8 @@
     "errorLens.onSaveTimeout": 1000,
     "errorLens.delay": 500,
     "errorLens.followCursor": "allLines",
+    "errorLens.fontStyleItalic": true,
+    "errorLens.fontSize": "90%",
     // ==================== Python-specific Settings ====================
     "[python]": {
         "editor.inlineSuggest.enabled": false,
