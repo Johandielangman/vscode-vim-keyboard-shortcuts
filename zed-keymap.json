@@ -1,0 +1,92 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+
+      // Docks (ctrl + alt + arrow)
+      "ctrl-alt-left": "workspace::ToggleLeftDock",
+      "ctrl-alt-right": "workspace::ToggleRightDock",
+      "ctrl-alt-down": "workspace::ToggleBottomDock",
+
+      // Other dock shortcuts
+      "ctrl-alt-t": "workspace::ToggleBottomDock",
+      "ctrl-alt-r": "workspace::ToggleRightDock",
+
+      // Panels
+      "ctrl-alt-g": "git_panel::ToggleFocus",
+      "ctrl-alt-d": "project_panel::ToggleFocus",
+
+      // Remove defaults
+      "ctrl-j": null,
+      "ctrl-alt-b": null,
+      "ctrl-shift-g": null,
+      "ctrl-shift-e": null
+    }
+  },
+  {
+    "context": "Editor && !menu",
+    "bindings": {
+      "ctrl-v": "editor::Paste",
+
+      // Repeat dock toggles here so editor defaults can't override them
+      "ctrl-alt-left": "workspace::ToggleLeftDock",
+      "ctrl-alt-right": "workspace::ToggleRightDock",
+      "ctrl-alt-down": "workspace::ToggleBottomDock"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !menu",
+    "bindings": {
+      "space t m": "editor::ToggleBreakpoint",
+      "space t r": "editor::SpawnNearestTask",
+      "space t f": ["task::Spawn", { "task_name": "pytest: current file" }],
+      "space t l": "debugger::Rerun",
+      "space space": "file_finder::Toggle",
+      "space f": "text_finder::Toggle",
+      // Save
+      "shift shift": "workspace::Save",
+
+      // Move focus between splits
+      "space w left": "workspace::ActivatePaneLeft",
+      "space w right": "workspace::ActivatePaneRight",
+      "space w up": "workspace::ActivatePaneUp",
+      "space w down": "workspace::ActivatePaneDown",
+
+      // Split and move the current file into the new split
+      "space s left": "pane::SplitAndMoveLeft",
+      "space s right": "pane::SplitAndMoveRight",
+      "space s up": "pane::SplitAndMoveUp",
+      "space s down": "pane::SplitAndMoveDown",
+
+      // Close the current split (closes all its tabs)
+      "space s c": "pane::CloseAllItems"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+      "ctrl-a": "editor::SelectAll"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "ctrl-a": "editor::SelectAll",
+
+      // Move focus between splits
+      "ctrl-w left": "workspace::ActivatePaneLeft",
+      "ctrl-w right": "workspace::ActivatePaneRight",
+      "ctrl-w up": "workspace::ActivatePaneUp",
+      "ctrl-w down": "workspace::ActivatePaneDown"
+    }
+  }
+]
